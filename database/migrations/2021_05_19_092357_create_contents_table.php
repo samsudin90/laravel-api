@@ -17,6 +17,7 @@ class CreateContentsTable extends Migration
             $table->id();
             $table->string('judul');
             $table->string('link');
+            $table->string('deskripsi');
             $table->timestamps();
         });
     }

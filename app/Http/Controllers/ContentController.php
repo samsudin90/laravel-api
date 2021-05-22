@@ -45,6 +45,7 @@ class ContentController extends Controller
         $validator = Validator::make($request->all(), [
             'judul' => ['required'],
             'link' =>['required']
+            'deskripsi' =>['required']
         ]);
 
         // cek validasi
@@ -105,7 +106,8 @@ class ContentController extends Controller
         $content = content::findOrFail($id);
         $validator = Validator::make($request->all(), [
             'judul' => ['required'],
-            'link' =>['required']
+            'link' =>['required'],
+            'deskripsi' =>['required']
         ]);
 
         // cek validasi

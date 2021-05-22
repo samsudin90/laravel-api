@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class content extends Model
 {
     use HasFactory;
-    protected $fillable = ['judul', 'link'];
+    protected $fillable = ['judul', 'link', 'deskripsi'];
 }
