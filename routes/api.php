@@ -21,12 +21,12 @@ use App\Http\Controllers\ContentController;
 // });
 
 Route::group(['middleware' => 'auth:sanctum'], function(){
-    Route::get('/content', [ContentController::class, 'index']);
     Route::post('/content', [ContentController::class, 'store']);
-    Route::get('/content/{id}', [ContentController::class, 'show']);
     Route::put('/content/{id}', [ContentController::class, 'update']);
     Route::delete('/content/{id}', [ContentController::class, 'destroy']);
     Route::get('/logout', [AuthController::class, 'logout']);
 });
 
+Route::get('/content', [ContentController::class, 'index']);
+Route::get('/content/{id}', [ContentController::class, 'show']);
 Route::post('/login', [AuthController::class, 'login']);

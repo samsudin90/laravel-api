@@ -44,7 +44,7 @@ class ContentController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'judul' => ['required'],
-            'link' =>['required']
+            'link' =>['required'],
             'deskripsi' =>['required']
         ]);
 
